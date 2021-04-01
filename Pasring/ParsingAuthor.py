@@ -21,11 +21,32 @@ def get_info_wikipedia(author):
     author_url = 'https://ru.wikipedia.org' + author_url
     author_page = parse(author_url)
 
-    for block_info in author_page.select('table.infobox > tbody > tr'):
-        title = block_info.select_one('th')
-        if title:
-            info = title.select_one('span')
-            print(title)
+    data = dict()
+
+    name = author_page.select_one('table.infobox > tbody > tr > th').getText()
+    data["Имя"] = name
+
+    career_a = author_page.select('[data-wikidata-property-id="P106"] > a')
+    if career_a:
+        career = [a.get('title') for a in career_a]
+        data["Род деятельности"] = career
+
+    date_of_birthday = author_page.select_one('[data-wikidata-property-id="P569"]').getText()
+    if "[" in date_of_birthday:
+        date_of_birthday = date_of_birthday[:date_of_birthday.index("[")]
+    data['Дата рождения'] = date_of_birthday
+
+    language_a = author_page.select('[data-wikidata-property-id="P1412"] > a')
+    if language_a:
+        language = [a.get('title') for a in language_a]
+        data['Язык произведений'] = language
+
+    genres_a = author_page.select('[data-wikidata-property-id="P136"] > a')
+    if genres_a:
+        genres = [a.get('title') for a in genres_a]
+        data['Жанр'] = genres
+
+    return data
 
 
 def main():
@@ -44,7 +65,7 @@ def main():
                    'Джек Лондон']
 
     for author in author_list:
-        get_info_wikipedia(author)
+        print(get_info_wikipedia(author))
 
 
 if __name__ == '__main__':
