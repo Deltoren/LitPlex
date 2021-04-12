@@ -1,0 +1,42 @@
+BoxLayout:
+    FloatLayout:
+        id: FL
+        size_hint: .1, 1
+        pos: 0, 0
+        canvas:
+            Color:
+                rgba: .58, .51, .53, .28
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Image:
+            size_hint: .1, 1
+            pos: FL.width * 0.01, FL.height * 0.43
+            source: "home_page_icon.png"
+        Label:
+            size_hint: .45, 1
+            pos: FL.width * 0.01, FL.height * 0.43
+            text: "Home"
+            font_size: 24
+        Image:
+            size_hint: .1, 1
+            pos: FL.width * 0.01, FL.height * 0.32
+            source: "search_page_icon.png"
+        Label:
+            size_hint: .45, 1
+            pos: FL.width * 0.01, FL.height * 0.32
+            text: "Search"
+            font_size: 24
+        Image:
+            size_hint: .1, 1
+            pos: FL.width * 0.01, -FL.height * 0.43
+            source: "upload_icon.png"
+        Label:
+            size_hint: .45, 1
+            pos: FL.width * 0.01, -FL.height * 0.43
+            text: "Upload"
+            font_size: 24
+
+
+
+

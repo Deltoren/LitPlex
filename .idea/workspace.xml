@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Импорт имен папок, реализация алгоритма" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Сделал примерный макет главной страницы">
+      <change afterPath="$PROJECT_DIR$/authorLayout.kv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fileLayout.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main_Activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_Activity.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +18,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/Design_(t7646)" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -32,7 +40,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -106,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616091381260</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Сделал примерный макет главной страницы">
+      <created>1617282013193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617282013193</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Импорт имен папок, реализация алгоритма" />
-    <option name="LAST_COMMIT_MESSAGE" value="Импорт имен папок, реализация алгоритма" />
+    <MESSAGE value="Сделал примерный макет главной страницы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал примерный макет главной страницы" />
   </component>
 </project>
