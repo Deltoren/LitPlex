@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Доделал макет главной страницы">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScanningNames.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/LitPlex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LitPlex.iml" afterDir="false" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Слил алгоритм импорта папок и макет главной страницы для дальнейшего вывода папок на экран главной страницы">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ScanningNames.py" beforeDir="false" afterPath="$PROJECT_DIR$/ScanningNames.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618248575080</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Слил алгоритм импорта папок и макет главной страницы для дальнейшего вывода папок на экран главной страницы">
+      <created>1618249087640</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618249087640</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +151,7 @@
     <MESSAGE value="Импорт имен папок, реализация алгоритма" />
     <MESSAGE value="Сделал примерный макет главной страницы" />
     <MESSAGE value="Доделал макет главной страницы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доделал макет главной страницы" />
+    <MESSAGE value="Слил алгоритм импорта папок и макет главной страницы для дальнейшего вывода папок на экран главной страницы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Слил алгоритм импорта папок и макет главной страницы для дальнейшего вывода папок на экран главной страницы" />
   </component>
 </project>
