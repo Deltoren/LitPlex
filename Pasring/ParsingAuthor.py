@@ -2,10 +2,20 @@ from time import time
 import requests
 from bs4 import BeautifulSoup
 import threading
+import csv
 
 
 lock = threading.Lock()
 thread_number = 16
+
+
+def save(data):
+    with open('data.csv', 'w') as f:
+        field_names = ['name', 'careers', 'date_of_birthday', 'languages', 'genres']
+        writer = csv.DictWriter(f, fieldnames=field_names)
+        writer.writeheader()
+        for author in data:
+            writer.writerow(author)
 
 
 def parse(url):
@@ -54,21 +64,23 @@ def get_info_wikipedia():
                 genres = [a.get('title') for a in genres_a]
 
             with lock:
-                data_wikipedia[name] = dict()
+                print(name, 'is done')
+                author = {'name': name}
                 if career_a:
-                    data_wikipedia[name]['Род деятельности'] = career
-                data_wikipedia[name]['Дата рождения'] = date_of_birthday
+                    author['careers'] = ",".join(career)
+                author['date_of_birthday'] = date_of_birthday
                 if language_a:
-                    data_wikipedia[name]['Язык произведений'] = language
+                    author['languages'] = ",".join(language)
                 if genres_a:
-                    data_wikipedia[name]['Жанр'] = genres
+                    author['genres'] = ",".join(genres)
+                data_wikipedia.append(author)
 
         except requests.exceptions.ConnectionError:
             print('Connection Error')
             continue
 
 
-data_wikipedia = dict()
+data_wikipedia = []
 pool = set()
 
 
@@ -109,6 +121,7 @@ def main():
 
     start_search(author_list)
     print(data_wikipedia)
+    save(data_wikipedia)
 
 
 if __name__ == '__main__':
