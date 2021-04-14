@@ -10,12 +10,18 @@ thread_number = 16
 
 
 def save(data):
-    with open('data.csv', 'w') as f:
+    with open('data.csv', 'w', encoding='UTF-8') as f:
         field_names = ['name', 'careers', 'date_of_birthday', 'languages', 'genres']
         writer = csv.DictWriter(f, fieldnames=field_names)
         writer.writeheader()
         for author in data:
             writer.writerow(author)
+
+
+def load():
+    with open('../library.csv', encoding='UTF-8') as f:
+        reader = csv.reader(f, delimiter='\n')
+        return [row[0] for row in reader]
 
 
 def parse(url):
@@ -84,10 +90,10 @@ data_wikipedia = []
 pool = set()
 
 
-def start_search(author_list):
+def start_search():
     global thread_number
 
-    for author in author_list:
+    for author in load():
         pool.add(author)
 
     thread_arr = []
@@ -119,9 +125,15 @@ def main():
                    'Михаил Шолохов',
                    'Джек Лондон']
 
-    start_search(author_list)
-    print(data_wikipedia)
+    #start_search(author_list)
+    #print(data_wikipedia)
+    #save(data_wikipedia)
+    start_search()
     save(data_wikipedia)
+    print(data_wikipedia)
+    with open("data.csv", encoding='UTF-8') as f:
+        reader = csv.DictReader(f)
+        print([row for row in reader])
 
 
 if __name__ == '__main__':
