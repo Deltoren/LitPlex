@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import threading
 import csv
+import psutil
 
 
 lock = threading.Lock()
@@ -137,4 +138,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    print(psutil.cpu_count())
