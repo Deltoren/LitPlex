@@ -2,6 +2,10 @@ import kivy
 import ScanningNames
 import csv
 import os
+import kivy
+import ScanningNames
+import csv
+import os
 import Pasring.ParsingAuthor
 
 from kivy.app import App
@@ -14,7 +18,7 @@ from kivy.uix.button import Button
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 
-authorLayout = Builder.load_file("authorLayout.kv")
+authorLayout = Builder.load_file("singleAuthorPanel.kv")
 fileLayoutMacket = Builder.load_file("fileLayout.kv")
 
 fileLayout = fileLayoutMacket
