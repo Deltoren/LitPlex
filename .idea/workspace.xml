@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Реализовал вывод названий папок на экран после импорта">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SingleAuthor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infoAboutAuthorLayout.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/singleAuthorPanel.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main_Activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_Activity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pasring/ParsingAuthor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pasring/ParsingAuthor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorLayout.kv" beforeDir="false" afterPath="$PROJECT_DIR$/authorLayout.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.csv" beforeDir="false" afterPath="$PROJECT_DIR$/library.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SingleAuthor.py" beforeDir="false" afterPath="$PROJECT_DIR$/SingleAuthor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +94,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.Main_Activity" />
+      <item itemvalue="Python.ScanningNames" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.ScanningNames" />
@@ -171,7 +166,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Import_Names" />
+                        <option value="SingleAuthor" />
                       </list>
                     </value>
                   </entry>
