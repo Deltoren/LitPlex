@@ -2,6 +2,7 @@ import kivy
 import ScanningNames
 import csv
 import os
+import Pasring.ParsingAuthor
 
 from kivy.app import App
 from kivy.uix.button import Button
@@ -25,18 +26,31 @@ class ProgramApp(App):
         mainLayout.add_widget(fileLayout)
         return mainLayout
 
-    def on_press_buttonUpdate(self):
+    def on_press_buttonUpload(self):
+        fileLayout.clear_widgets()
         ScanningNames.ScanningNames()
-        with open("library.csv", encoding='utf-8') as r_file:
+        with open("./data.csv", encoding='utf-8') as r_file:
             # Создаем объект DictReader, указываем символ-разделитель ","
-            file_reader = csv.reader(r_file, delimiter=",")
-            # Счетчик для подсчета количества строк и вывода заголовков столбцов
-            count = 0
+            file_reader = csv.DictReader(r_file)
             # Считывание данных из CSV файла
+            count = 0
             for row in file_reader:
-                btn = Button(text=row[0])
+                if count > 5:
+                    break
+                count += 1
+                info = 'Имя: ' + row['name']
+                if row['careers']:
+                    info += '\n' + 'Род деятельности: ' + ', '.join(row['careers'].split(','))
+                if row['date_of_birthday']:
+                    info += '\n' + 'Дата рождения: ' + row['date_of_birthday']
+                if row['languages']:
+                    info += '\n' + 'Языки произведений: ' + ', '.join(row['languages'].split(','))
+                if row['genres']:
+                    info += '\n' + 'Жанры: ' + ', '.join(row['genres'].split(','))
+                btn = Button(text=info)
                 btn.bind(on_press=self.on_press_button)
                 fileLayout.add_widget(btn)
+        Pasring.ParsingAuthor.start_search()
 
     def on_press_button(self, instance):
         print("f")
