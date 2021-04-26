@@ -7,7 +7,7 @@ import psutil
 
 
 lock = threading.Lock()
-thread_number = 16
+thread_number = psutil.cpu_count()
 
 
 def save(data):
@@ -134,7 +134,17 @@ def main():
     print(data_wikipedia)
     with open("data.csv", encoding='UTF-8') as f:
         reader = csv.DictReader(f)
-        print([row for row in reader])
+        for row in reader:
+            info = 'Имя: ' + row['name']
+            if row['careers']:
+                info += '\n' + 'Род деятельности: ' + ', '.join(row['careers'].split(','))
+            if row['date_of_birthday']:
+                info += '\n' + 'Дата рождения: ' + row['date_of_birthday']
+            if row['languages']:
+                info += '\n' + 'Языки произведений: ' + ', '.join(row['languages'].split(','))
+            if row['genres']:
+                info += '\n' + 'Жанры: ' + ', '.join(row['genres'].split(','))
+            print(info)
 
 
 if __name__ == '__main__':
