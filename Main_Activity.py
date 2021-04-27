@@ -14,14 +14,18 @@ from kivy.uix.button import Button
 from kivy.lang import Builder
 from kivy.properties import StringProperty
 
+import SingleAuthor
+from SingleAuthor import SingleAuthorApp
+
 authorLayout = Builder.load_file("authorLayout.kv")
 fileLayoutMacket = Builder.load_file("fileLayout.kv")
 
+mainLayout = BoxLayout()
 fileLayout = fileLayoutMacket
+
 
 class ProgramApp(App):
     def build(self):
-        mainLayout = BoxLayout()
         mainLayout.add_widget(authorLayout)
         mainLayout.add_widget(fileLayout)
         return mainLayout
@@ -53,7 +57,9 @@ class ProgramApp(App):
         Pasring.ParsingAuthor.start_search()
 
     def on_press_button(self, instance):
-        print("f")
+        mainLayout.clear_widgets()
+        ProgramApp().stop()
+        SingleAuthor.main()
 
 if __name__ == "__main__":
     ProgramApp().run()

@@ -3,7 +3,6 @@ import ScanningNames
 import csv
 import os
 import kivy
-import ScanningNames
 import csv
 import os
 import Pasring.ParsingAuthor
@@ -24,10 +23,13 @@ infoAboutAuthorLayout = Builder.load_file("infoAboutAuthorLayout.kv")
 
 infoAboutAuthorLayout = infoAboutAuthorLayout
 
-class ProgramApp(App):
+def main():
+    SingleAuthorApp().run()
+
+class SingleAuthorApp(App):
     def build(self):
-        mainLayout = BoxLayout()
-        mainLayout.add_widget(authorLayout)
+        mainBL = BoxLayout()
+        mainBL.add_widget(authorLayout)
         with open("./data.csv", encoding='utf-8') as r_file:
             # Создаем объект DictReader, указываем символ-разделитель ","
             file_reader = csv.DictReader(r_file)
@@ -47,12 +49,8 @@ class ProgramApp(App):
                         info += '\n' + 'Языки произведений: ' + ', '.join(row['languages'].split(','))
                     if row['genres']:
                         info += '\n' + 'Жанры: ' + ', '.join(row['genres'].split(','))
-                    lbl = Label(text=info, font_size='20sp', size_hint=(.5, .5), pos_hint={'x':0.2, 'y':0.3})
+                    lbl = Label(text=info, font_size='20sp', size_hint=(.5, .5), pos_hint={'x': 0.2, 'y': 0.3})
 
                     infoAboutAuthorLayout.add_widget(lbl)
-        mainLayout.add_widget(infoAboutAuthorLayout)
-        return mainLayout
-
-
-if __name__ == "__main__":
-    ProgramApp().run()
+        mainBL.add_widget(infoAboutAuthorLayout)
+        return mainBL
