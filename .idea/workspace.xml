@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Реализовал вывод названий папок на экран после импорта">
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Начал работу над layout-ом с информацией об авторе:&#10;-Проработал цикл чтения из CSV для одного автора&#10;-Офрмил вывод информации об авторе">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SingleAuthor.py" beforeDir="false" afterPath="$PROJECT_DIR$/SingleAuthor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infoAboutAuthorLayout.kv" beforeDir="false" afterPath="$PROJECT_DIR$/infoAboutAuthorLayout.kv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="infoAboutAuthor" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +53,7 @@
       <recent name="C:\Users\gibne\PycharmProjects\LitPlex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main_Activity">
+  <component name="RunManager" selected="Python.SingleAuthor">
     <configuration name="Main_Activity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="LitPlex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -94,12 +96,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="SingleAuthor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LitPlex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SingleAuthor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Main_Activity" />
       <item itemvalue="Python.ScanningNames" />
+      <item itemvalue="Python.SingleAuthor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SingleAuthor" />
         <item itemvalue="Python.ScanningNames" />
         <item itemvalue="Python.ScanningNames" />
       </list>
@@ -149,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618250130076</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout">
+      <created>1619456874085</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619456874085</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout">
+      <created>1619456885190</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619456885190</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -186,6 +225,7 @@
     <MESSAGE value="Слил алгоритм импорта папок и макет главной страницы для дальнейшего вывода папок на экран главной страницы" />
     <MESSAGE value="Оформил алгоритм импорта папок в функцию" />
     <MESSAGE value="Реализовал вывод названий папок на экран после импорта" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовал вывод названий папок на экран после импорта" />
+    <MESSAGE value="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout" />
   </component>
 </project>
