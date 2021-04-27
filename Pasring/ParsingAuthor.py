@@ -30,6 +30,18 @@ def parse(url):
     return BeautifulSoup(r.content, 'lxml')
 
 
+def init_modal_no_authors(folder_name):
+    with lock:
+        while True:
+            answer = input('Create custom author (1) OR change folder\'s name (2): ')
+            if answer in {'1', '2'}:
+                if answer == '1':
+                    print('init Изменить название')
+                else:
+                    print('init Создать кастомного автора')
+                break
+
+
 def get_info_wikipedia():
 
     while True:
@@ -45,7 +57,15 @@ def get_info_wikipedia():
 
         try:
 
+            print(author)
             search_page = parse(search_url)
+
+            # Если не найдено ни одного автора
+            if not search_page.select_one('div.searchresults > ul.mw-search-results > li.mw-search-result > \
+                                                     div.mw-search-result-heading > a'):
+                init_modal_no_authors(author)
+                return 0
+
             author_url = search_page.select_one('div.searchresults > ul.mw-search-results > li.mw-search-result > \
                                                      div.mw-search-result-heading > a').get('href')
 
@@ -148,5 +168,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    print(psutil.cpu_count())
+    main()
