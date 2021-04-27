@@ -47,7 +47,8 @@ class ProgramApp(App):
                         info += '\n' + 'Языки произведений: ' + ', '.join(row['languages'].split(','))
                     if row['genres']:
                         info += '\n' + 'Жанры: ' + ', '.join(row['genres'].split(','))
-                    lbl = Label(text=info)
+                    lbl = Label(text=info, font_size='20sp', size_hint=(.5, .5), pos_hint={'x':0.2, 'y':0.3})
+
                     infoAboutAuthorLayout.add_widget(lbl)
         mainLayout.add_widget(infoAboutAuthorLayout)
         return mainLayout

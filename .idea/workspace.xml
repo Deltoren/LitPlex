@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout">
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Начал работу выводом информации об авторе:&#10;-Проработал цикл чтения из CSV для одного автора">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SingleAuthor.py" beforeDir="false" afterPath="$PROJECT_DIR$/SingleAuthor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infoAboutAuthorLayout.kv" beforeDir="false" afterPath="$PROJECT_DIR$/infoAboutAuthorLayout.kv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +124,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.ScanningNames" />
+        <item itemvalue="Python.SingleAuthor" />
+        <item itemvalue="Python.SingleAuthor" />
+        <item itemvalue="Python.SingleAuthor" />
         <item itemvalue="Python.ScanningNames" />
       </list>
     </recent_temporary>
