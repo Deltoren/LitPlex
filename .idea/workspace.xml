@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Начал работу выводом информации об авторе:&#10;-Проработал цикл чтения из CSV для одного автора">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleAuthor.py" beforeDir="false" afterPath="$PROJECT_DIR$/SingleAuthor.py" afterDir="false" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Начал работу над боковой панель страницы отдельного автора">
+      <change beforePath="$PROJECT_DIR$/singleAuthorPanel.kv" beforeDir="false" afterPath="$PROJECT_DIR$/singleAuthorPanel.kv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,10 +123,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.SingleAuthor" />
+        <item itemvalue="Python.ScanningNames" />
+        <item itemvalue="Python.ScanningNames" />
       </list>
     </recent_temporary>
   </component>
@@ -175,19 +172,19 @@
       <option name="project" value="LOCAL" />
       <updated>1618250130076</updated>
     </task>
-    <task id="LOCAL-00006" summary="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout">
-      <created>1619456874085</created>
+    <task id="LOCAL-00006" summary="Начал работу над страницой отдельного автора:&#10;-импортировал нужные библиотки&#10;-создал 2 лэйаута: для боковой панели, для вывода информации об авторе">
+      <created>1619452919903</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1619456874085</updated>
+      <updated>1619452919903</updated>
     </task>
-    <task id="LOCAL-00007" summary="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout">
-      <created>1619456885190</created>
+    <task id="LOCAL-00007" summary="Начал работу над боковой панель страницы отдельного автора">
+      <created>1619455639026</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1619456885190</updated>
+      <updated>1619455639026</updated>
     </task>
     <option name="localTasksCounter" value="8" />
     <servers />
@@ -206,7 +203,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="SingleAuthor" />
+                        <option value="Import_Names" />
                       </list>
                     </value>
                   </entry>
@@ -226,7 +223,8 @@
     <MESSAGE value="Слил алгоритм импорта папок и макет главной страницы для дальнейшего вывода папок на экран главной страницы" />
     <MESSAGE value="Оформил алгоритм импорта папок в функцию" />
     <MESSAGE value="Реализовал вывод названий папок на экран после импорта" />
-    <MESSAGE value="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начал работу над общим layout-ом:&#10;-импортировал CV файлы других layout-ов(&quot;Боковая панель&quot; и &quot;Информация об авторе&quot;)&#10;- соеденил layout-ы в main_layout" />
+    <MESSAGE value="Начал работу над страницой отдельного автора:&#10;-импортировал нужные библиотки&#10;-создал 2 лэйаута: для боковой панели, для вывода информации об авторе" />
+    <MESSAGE value="Начал работу над боковой панель страницы отдельного автора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начал работу над боковой панель страницы отдельного автора" />
   </component>
 </project>
