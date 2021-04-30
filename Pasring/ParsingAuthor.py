@@ -4,7 +4,10 @@ from bs4 import BeautifulSoup
 import threading
 import csv
 import psutil
+import wikipedia
 
+
+wikipedia.set_lang('ru')
 
 lock = threading.Lock()
 thread_number = psutil.cpu_count()
@@ -28,6 +31,62 @@ def load():
 def parse(url):
     r = requests.get(url)
     return BeautifulSoup(r.content, 'lxml')
+
+
+def get_info_wikipedia_api():
+
+    while True:
+
+        with lock:
+            if pool:
+                author = pool.pop()
+
+                try:
+                    author_url = wikipedia.page(author).url
+                except wikipedia.exceptions.PageError as e:
+                    print(e)
+                    continue
+
+            else:
+                break
+
+        try:
+
+            author_page = parse(author_url)
+
+            name = author_page.select_one('table.infobox > tbody > tr > th').getText()
+
+            career_a = author_page.select('[data-wikidata-property-id="P106"] > a')
+            if career_a:
+                career = [a.get('title') for a in career_a]
+
+            date_of_birthday = author_page.select_one('[data-wikidata-property-id="P569"]').getText()
+            if "[" in date_of_birthday:
+                date_of_birthday = date_of_birthday[:date_of_birthday.index("[")]
+
+            language_a = author_page.select('[data-wikidata-property-id="P1412"] > a')
+            if language_a:
+                language = [a.get('title') for a in language_a]
+
+            genres_a = author_page.select('[data-wikidata-property-id="P136"] > a')
+            if genres_a:
+                genres = [a.get('title') for a in genres_a]
+
+            with lock:
+                print(name, 'is done')
+                author = {'name': name}
+                if career_a:
+                    author['careers'] = ",".join(career)
+                author['date_of_birthday'] = date_of_birthday
+                if language_a:
+                    author['languages'] = ",".join(language)
+                if genres_a:
+                    author['genres'] = ",".join(genres)
+                data_wikipedia.append(author)
+
+        except requests.exceptions.ConnectionError:
+            print('Connection Error')
+            continue
 
 
 def get_info_wikipedia():
@@ -100,7 +159,7 @@ def start_search():
     thread_arr = []
 
     for i in range(thread_number):
-        thread = threading.Thread(target=get_info_wikipedia)
+        thread = threading.Thread(target=get_info_wikipedia_api)
         thread_arr.append(thread)
         thread.start()
 
@@ -148,5 +207,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    print(psutil.cpu_count())
+    main()
+    wikipedia.set_lang('ru')
