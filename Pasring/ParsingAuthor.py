@@ -1,10 +1,12 @@
 from time import time
+from random import randrange as rnd
 import requests
 from bs4 import BeautifulSoup
 import threading
 import csv
 import psutil
 import wikipedia
+import matplotlib.pyplot as plt
 
 
 wikipedia.set_lang('ru')
@@ -150,6 +152,75 @@ data_wikipedia = []
 pool = set()
 
 
+def time_test():
+    global pool
+
+    time1_ax = []
+    time2_ax = []
+    count_ax = []
+
+    for n in range(1, len(load())):
+
+        author_set = set(load())
+
+        count_ax.append(n)
+
+        author_set_buf = set([author_set.pop() for i in range(n)])
+
+        # Парсинг
+
+        pool = author_set_buf.copy()
+        thread_arr = []
+
+        start = time()
+
+        for i in range(thread_number):
+            thread = threading.Thread(target=get_info_wikipedia)
+            thread_arr.append(thread)
+            thread.start()
+
+        for thread in thread_arr:
+            thread.join()
+
+        end = time()
+        time1_ax.append(end - start)
+
+        thread_arr.clear()
+        pool.clear()
+        data_wikipedia.clear()
+
+        # Парсинг + API
+
+        pool = author_set_buf.copy()
+        thread_arr = []
+
+        start = time()
+
+        for i in range(thread_number):
+            thread = threading.Thread(target=get_info_wikipedia_api)
+            thread_arr.append(thread)
+            thread.start()
+
+        for thread in thread_arr:
+            thread.join()
+
+        end = time()
+        time2_ax.append(end - start)
+
+        thread_arr.clear()
+        pool.clear()
+        data_wikipedia.clear()
+
+    plt.plot(count_ax, time1_ax, label="Парсинг")
+    plt.plot(count_ax, time2_ax, label="Парсинг + API")
+    plt.xlabel('кол-во авторов')
+    plt.ylabel('время, сек')
+    plt.title('Сравнение времени работы алгоритмов')
+
+    plt.legend()
+    plt.show()
+
+
 def start_search():
     global thread_number
 
@@ -207,5 +278,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
-    wikipedia.set_lang('ru')
+    # main()
+    time_test()
