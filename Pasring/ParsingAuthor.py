@@ -30,6 +30,19 @@ def parse(url):
     return BeautifulSoup(r.content, 'lxml')
 
 
+def init_modal_many_results(data):
+    with lock:
+        while True:
+            print('\n'.join([f"{i + 1}. {author}" for (i, author) in enumerate(data)]))
+            answer = input("Выберите подходящего вам автора: ")
+            if answer.isdigit() and 0 < int(answer) < len(data) + 1:
+                print("OK")
+                return int(answer)
+            else:
+                print("init ВИ")
+                return 0
+
+
 def get_info_wikipedia():
 
     while True:
@@ -46,8 +59,30 @@ def get_info_wikipedia():
         try:
 
             search_page = parse(search_url)
-            author_url = search_page.select_one('div.searchresults > ul.mw-search-results > li.mw-search-result > \
-                                                     div.mw-search-result-heading > a').get('href')
+
+            # Если найдено несколько авторов
+            if len(search_page.select('div.searchresults > ul.mw-search-results > li.mw-search-result > \
+                                                     div.mw-search-result-heading > a')) > 1:
+                all_result = search_page.select('div.searchresults > ul.mw-search-results > li.mw-search-result > \
+                                                     div.mw-search-result-heading > a')
+                result_arr = [] + [all_result[0]]
+                result_arr_name = [all_result[0].getText()]
+                for result in all_result[1:]:
+                    for word in author.split(" "):
+                        if word in result.getText():
+                            result_arr.append(result)
+                            result_arr_name.append(result.getText())
+                if len(result_arr) == 1:
+                    author_url = result_arr[0].get('href')
+                else:
+                    index = init_modal_many_results(result_arr_name)
+                    if index:
+                        author_url = result_arr[index - 1].get('href')
+                    else:
+                        return 0
+            else:
+                author_url = search_page.select_one('div.searchresults > ul.mw-search-results > li.mw-search-result > \
+                                                                     div.mw-search-result-heading > a').get('href')
 
             author_url = 'https://ru.wikipedia.org' + author_url
             author_page = parse(author_url)
@@ -148,5 +183,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    print(psutil.cpu_count())
+    main()
