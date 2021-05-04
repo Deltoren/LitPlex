@@ -17,11 +17,14 @@ from kivy.properties import StringProperty
 import SingleAuthor
 from SingleAuthor import SingleAuthorApp
 
+panel = Builder.load_file("Genres_Panel.kv")
+
 mainLayout = BoxLayout()
 
 
 class GenreApp(App):
     def build(self):
+        mainLayout.add_widget(panel)
         return mainLayout
 
 

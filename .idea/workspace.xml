@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити">
-      <change afterPath="$PROJECT_DIR$/Genres/Genres_Panel.kv" afterDir="false" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="init commit:&#10;-создал файл Genres_Panel&#10;-начал работу над Панелью">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620108735891</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="init commit:&#10;-создал файл Genres_Panel&#10;-начал работу над Панелью">
+      <created>1620109509381</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620109509381</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -244,6 +250,7 @@
     <MESSAGE value="Начал работу над боковой панель страницы отдельного автора" />
     <MESSAGE value="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе" />
     <MESSAGE value="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити" />
+    <MESSAGE value="init commit:&#10;-создал файл Genres_Panel&#10;-начал работу над Панелью" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit:&#10;-создал файл Genres_Panel&#10;-начал работу над Панелью" />
   </component>
 </project>
