@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main_Activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main_Activity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SingleAuthor.py" beforeDir="false" afterPath="$PROJECT_DIR$/SingleAuthor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infoAboutAuthorLayout.kv" beforeDir="false" afterPath="$PROJECT_DIR$/infoAboutAuthorLayout.kv" afterDir="false" />
-    </list>
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Доделал страницу автора:&#10;-доделал вывод информации об авторе&#10;-сделал переход между Главной активити и Активити отдельного автора" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +15,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="singleAuthorPanel" />
+    <option name="BRANCH" value="SingleAuthor" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -33,7 +26,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="infoAboutAuthor" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +49,7 @@
       <recent name="C:\Users\gibne\PycharmProjects\LitPlex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main_Activity">
+  <component name="RunManager" selected="Python.SingleAuthor">
     <configuration name="Main_Activity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="LitPlex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,6 +120,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SingleAuthor" />
         <item itemvalue="Python.SingleAuthor" />
         <item itemvalue="Python.ScanningNames" />
         <item itemvalue="Python.ScanningNames" />
