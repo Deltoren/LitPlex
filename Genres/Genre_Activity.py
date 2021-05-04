@@ -12,16 +12,15 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.lang import Builder
-from kivy.properties import StringProperty
 
-import SingleAuthor
-from SingleAuthor import SingleAuthorApp
+authors = Builder.load_file("Genre_Authors.kv")
 
 mainLayout = BoxLayout()
 
 
 class GenreApp(App):
     def build(self):
+        mainLayout.add_widget(authors)
         return mainLayout
 
 
