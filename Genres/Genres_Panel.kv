@@ -1,0 +1,49 @@
+BoxLayout:
+    FloatLayout:
+        id: FL
+        size_hint: .1, 1
+        pos: 0, 0
+        canvas:
+            Color:
+                rgba: .58, .51, .53, .28
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Image:
+            size_hint: .1, 1
+            pos: FL.width * 0.01, FL.height * 0.43
+            source: "home_page_icon.png"
+        Label:
+            size_hint: .45, 1
+            pos: FL.width * 0.01, FL.height * 0.43
+            text: "Home"
+            font_size: 24
+        Image:
+            size_hint: .1, 1
+            pos: FL.width * 0.01, FL.height * 0.32
+            source: "search_page_icon.png"
+        Label:
+            size_hint: .45, 1
+            pos: FL.width * 0.01, FL.height * 0.32
+            text: "Search"
+            font_size: 24
+        Image:
+            size_hint: .1, 1
+            pos: FL.width * 0.01, -FL.height * 0.43
+            source: "back_icon.png"
+        FloatLayout:
+            size_hint: .15, .15
+            pos: FL.width * 0.01, -FL.height * 0.43
+            Button:
+                background_normal: ''
+                background_color: 0, 0, 0, 0
+                on_press: app.on_press_buttonBack()
+        Label:
+            size_hint: .45, 1
+            pos: FL.width * 0.01, -FL.height * 0.43
+            text: "Back"
+            font_size: 24
+
+
+
+

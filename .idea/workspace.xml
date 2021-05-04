@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Доделал страницу автора:&#10;-доделал вывод информации об авторе&#10;-сделал переход между Главной активити и Активити отдельного автора">
-      <change afterPath="$PROJECT_DIR$/Genres/Genre_Activity.py" afterDir="false" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити">
+      <change afterPath="$PROJECT_DIR$/Genres/Genres_Panel.kv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Genres" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,10 +45,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Genres" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gibne\PycharmProjects\LitPlex\Genres" />
       <recent name="C:\Users\gibne\PycharmProjects\LitPlex" />
     </key>
   </component>
@@ -195,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619528460561</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити">
+      <created>1620108735891</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1620108735891</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -235,6 +243,7 @@
     <MESSAGE value="Начал работу над страницой отдельного автора:&#10;-импортировал нужные библиотки&#10;-создал 2 лэйаута: для боковой панели, для вывода информации об авторе" />
     <MESSAGE value="Начал работу над боковой панель страницы отдельного автора" />
     <MESSAGE value="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе" />
+    <MESSAGE value="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити" />
+    <option name="LAST_COMMIT_MESSAGE" value="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити" />
   </component>
 </project>
