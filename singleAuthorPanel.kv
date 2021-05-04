@@ -30,18 +30,18 @@ BoxLayout:
         Image:
             size_hint: .1, 1
             pos: FL.width * 0.01, -FL.height * 0.43
-            source: "upload_icon.png"
+            source: "back_icon.png"
         FloatLayout:
             size_hint: .15, .15
             pos: FL.width * 0.01, -FL.height * 0.43
             Button:
                 background_normal: ''
                 background_color: 0, 0, 0, 0
-                on_press: app.on_press_buttonUpload()
+                on_press: app.on_press_buttonBack()
         Label:
             size_hint: .45, 1
             pos: FL.width * 0.01, -FL.height * 0.43
-            text: "Upload"
+            text: "Back"
             font_size: 24
 
 
