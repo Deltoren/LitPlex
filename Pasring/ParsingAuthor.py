@@ -3,10 +3,11 @@ import requests
 from bs4 import BeautifulSoup
 import threading
 import csv
+import psutil
 
 
 lock = threading.Lock()
-thread_number = 16
+thread_number = psutil.cpu_count()
 
 
 def save(data):
@@ -19,7 +20,7 @@ def save(data):
 
 
 def load():
-    with open('../library.csv', encoding='UTF-8') as f:
+    with open('library.csv', encoding='UTF-8') as f:
         reader = csv.reader(f, delimiter='\n')
         return [row[0] for row in reader]
 
@@ -108,6 +109,7 @@ def start_search():
 
     thread_arr.clear()
     pool.clear()
+    save(data_wikipedia)
 
 
 def main():
@@ -133,8 +135,19 @@ def main():
     print(data_wikipedia)
     with open("data.csv", encoding='UTF-8') as f:
         reader = csv.DictReader(f)
-        print([row for row in reader])
+        for row in reader:
+            info = 'Имя: ' + row['name']
+            if row['careers']:
+                info += '\n' + 'Род деятельности: ' + ', '.join(row['careers'].split(','))
+            if row['date_of_birthday']:
+                info += '\n' + 'Дата рождения: ' + row['date_of_birthday']
+            if row['languages']:
+                info += '\n' + 'Языки произведений: ' + ', '.join(row['languages'].split(','))
+            if row['genres']:
+                info += '\n' + 'Жанры: ' + ', '.join(row['genres'].split(','))
+            print(info)
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    print(psutil.cpu_count())
