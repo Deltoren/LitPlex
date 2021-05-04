@@ -54,3 +54,6 @@ class SingleAuthorApp(App):
                     infoAboutAuthorLayout.add_widget(lbl)
         mainBL.add_widget(infoAboutAuthorLayout)
         return mainBL
+
+if __name__ == "__main__":
+    SingleAuthorApp().run()

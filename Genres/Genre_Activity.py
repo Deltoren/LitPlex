@@ -13,6 +13,7 @@ from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.lang import Builder
 
+panel = Builder.load_file("Genres_Panel.kv")
 authors = Builder.load_file("Genre_Authors.kv")
 
 mainLayout = BoxLayout()
@@ -20,6 +21,7 @@ mainLayout = BoxLayout()
 
 class GenreApp(App):
     def build(self):
+        mainLayout.add_widget(panel)
         mainLayout.add_widget(authors)
         return mainLayout
 

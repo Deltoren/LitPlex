@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров">
+      <change afterPath="$PROJECT_DIR$/Genres/back_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genres/home_page_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Genres/search_page_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genres/Genre_Activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Genres/Genre_Activity.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genres/Genre_Authors.kv" beforeDir="false" afterPath="$PROJECT_DIR$/Genres/Genre_Authors.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SingleAuthor.py" beforeDir="false" afterPath="$PROJECT_DIR$/SingleAuthor.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +23,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="SingleAuthor" />
+    <option name="BRANCH" value="Genre_Authors" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -273,5 +281,15 @@
     <MESSAGE value="init commit&#10;- создал Genres_Authors&#10;- изменения в workspace" />
     <MESSAGE value="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
     <option name="LAST_COMMIT_MESSAGE" value="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Genres/Genre_Activity.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
