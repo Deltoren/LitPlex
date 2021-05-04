@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Закончил работу над боковой панелью&#10;- добавил панель в Активити жанров&#10;- изменения в workspace" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +50,28 @@
       <recent name="C:\Users\gibne\PycharmProjects\LitPlex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.SingleAuthor">
+  <component name="RunManager" selected="Python.Genre_Activity">
+    <configuration name="Genre_Activity" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LitPlex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Genres" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Genres/Genre_Activity.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main_Activity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="LitPlex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -118,9 +139,11 @@
       <item itemvalue="Python.Main_Activity" />
       <item itemvalue="Python.ScanningNames" />
       <item itemvalue="Python.SingleAuthor" />
+      <item itemvalue="Python.Genre_Activity" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Genre_Activity" />
         <item itemvalue="Python.SingleAuthor" />
         <item itemvalue="Python.SingleAuthor" />
         <item itemvalue="Python.ScanningNames" />
@@ -193,28 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619528460561</updated>
     </task>
-    <task id="LOCAL-00009" summary="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити">
-      <created>1620108735891</created>
+    <task id="LOCAL-00009" summary="init commit&#10;- создал Genres_Authors&#10;- изменения в workspace">
+      <created>1620112993251</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1620108735891</updated>
+      <updated>1620112993251</updated>
     </task>
-    <task id="LOCAL-00010" summary="init commit:&#10;-создал файл Genres_Panel&#10;-начал работу над Панелью">
-      <created>1620109509381</created>
+    <task id="LOCAL-00010" summary="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров">
+      <created>1620114060188</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1620109509381</updated>
+      <updated>1620114060188</updated>
     </task>
-    <task id="LOCAL-00011" summary="Закончил работу над боковой панелью&#10;- добавил панель в Активити жанров&#10;- изменения в workspace">
-      <created>1620110827124</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1620110827124</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -254,9 +270,8 @@
     <MESSAGE value="Начал работу над страницой отдельного автора:&#10;-импортировал нужные библиотки&#10;-создал 2 лэйаута: для боковой панели, для вывода информации об авторе" />
     <MESSAGE value="Начал работу над боковой панель страницы отдельного автора" />
     <MESSAGE value="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе" />
-    <MESSAGE value="init commit:&#10;-создал папку Genres&#10;-начал работу над Активити" />
-    <MESSAGE value="init commit:&#10;-создал файл Genres_Panel&#10;-начал работу над Панелью" />
-    <MESSAGE value="Закончил работу над боковой панелью&#10;- добавил панель в Активити жанров&#10;- изменения в workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Закончил работу над боковой панелью&#10;- добавил панель в Активити жанров&#10;- изменения в workspace" />
+    <MESSAGE value="init commit&#10;- создал Genres_Authors&#10;- изменения в workspace" />
+    <MESSAGE value="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
   </component>
 </project>
