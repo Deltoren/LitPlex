@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="init commit&#10;- Создал директрию Books&#10;- Создал Books_Activity">
-      <change afterPath="$PROJECT_DIR$/Books/Books_MainLayout.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Books/Books_Panel.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Books/Books_Activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Books/Books_Activity.py" afterDir="false" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Доделал страницу автора:&#10;-доделал вывод информации об авторе&#10;-сделал переход между Главной активити и Активити отдельного автора">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Books/Books_MainLayout.kv" beforeDir="false" afterPath="$PROJECT_DIR$/Books/Books_MainLayout.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Books/Books_Panel.kv" beforeDir="false" afterPath="$PROJECT_DIR$/Books/Books_Panel.kv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +19,7 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="SingleAuthor" />
+    <option name="BRANCH" value="Genre_Authors" />
   </component>
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
@@ -30,7 +30,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Books" />
+        <entry key="$PROJECT_DIR$" value="Genres" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,11 +46,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Books" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Genres" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\gibne\PycharmProjects\LitPlex\Books" />
+      <recent name="C:\Users\gibne\PycharmProjects\LitPlex\Genres" />
       <recent name="C:\Users\gibne\PycharmProjects\LitPlex" />
     </key>
   </component>
@@ -68,6 +68,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Books/Books_Activity.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Genre_Activity" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LitPlex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Genres" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Genres/Genre_Activity.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -140,6 +161,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.Genre_Activity" />
       <item itemvalue="Python.Main_Activity" />
       <item itemvalue="Python.ScanningNames" />
       <item itemvalue="Python.SingleAuthor" />
@@ -149,9 +171,9 @@
       <list>
         <item itemvalue="Python.Books_Activity" />
         <item itemvalue="Python.SingleAuthor" />
+        <item itemvalue="Python.Genre_Activity" />
         <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.ScanningNames" />
-        <item itemvalue="Python.ScanningNames" />
+        <item itemvalue="Python.SingleAuthor" />
       </list>
     </recent_temporary>
   </component>
@@ -220,14 +242,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619528460561</updated>
     </task>
-    <task id="LOCAL-00009" summary="init commit&#10;- Создал директрию Books&#10;- Создал Books_Activity">
-      <created>1620217147467</created>
+    <task id="LOCAL-00009" summary="init commit&#10;- создал Genres_Authors&#10;- изменения в workspace">
+      <created>1620112993251</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1620217147467</updated>
+      <updated>1620112993251</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров">
+      <created>1620114060188</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1620114060188</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -267,7 +296,8 @@
     <MESSAGE value="Начал работу над страницой отдельного автора:&#10;-импортировал нужные библиотки&#10;-создал 2 лэйаута: для боковой панели, для вывода информации об авторе" />
     <MESSAGE value="Начал работу над боковой панель страницы отдельного автора" />
     <MESSAGE value="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе" />
-    <MESSAGE value="init commit&#10;- Создал директрию Books&#10;- Создал Books_Activity" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit&#10;- Создал директрию Books&#10;- Создал Books_Activity" />
+    <MESSAGE value="init commit&#10;- создал Genres_Authors&#10;- изменения в workspace" />
+    <MESSAGE value="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закончил работу над панелью вывода авторов&#10;- закончил работу над Genres_Authors&#10;- изменения в workspace&#10;- добавил Genres_Authors в главную Активити жанров" />
   </component>
 </project>
