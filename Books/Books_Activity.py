@@ -19,9 +19,6 @@ from kivy.lang import Builder
 from kivy.properties import StringProperty
 
 
-def main():
-    BooksApp().run()
-
 class BooksApp(App):
     def build(self):
         mainBL = BoxLayout()
