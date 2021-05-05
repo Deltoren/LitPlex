@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import threading
 import csv
 import psutil
+import os
 
 
 lock = threading.Lock()
@@ -20,7 +21,7 @@ def save(data):
 
 
 def load():
-    with open('library.csv', encoding='UTF-8') as f:
+    with open('../library.csv', encoding='UTF-8') as f:
         reader = csv.reader(f, delimiter='\n')
         return [row[0] for row in reader]
 
@@ -28,6 +29,32 @@ def load():
 def parse(url):
     r = requests.get(url)
     return BeautifulSoup(r.content, 'lxml')
+
+
+def custom_author():
+    with lock:
+        while True:
+            name = input('Введите имя автора: ')
+            if not os.path.exists(f'/Users/Admin/Downloads/Библиотека/{name}'):
+                os.mkdir(f'/Users/Admin/Downloads/Библиотека/{name}')
+                break
+            else:
+                print('Автор существует')
+
+        career = input('Род деятельности (через ","): ')
+        date_of_birthday = input('Дата рождения: ')
+        language = input('Языки произведений (через ","): ')
+        genres = input('Жанры произведений (через ","): ')
+        author = {'name': name}
+        if career:
+            author['careers'] = career
+        author['date_of_birthday'] = date_of_birthday
+        if language:
+            author['languages'] = language
+        if genres:
+            author['genres'] = genres
+        save([author])
+    pass
 
 
 def get_info_wikipedia():
@@ -109,7 +136,6 @@ def start_search():
 
     thread_arr.clear()
     pool.clear()
-    save(data_wikipedia)
 
 
 def main():
@@ -135,17 +161,7 @@ def main():
     print(data_wikipedia)
     with open("data.csv", encoding='UTF-8') as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            info = 'Имя: ' + row['name']
-            if row['careers']:
-                info += '\n' + 'Род деятельности: ' + ', '.join(row['careers'].split(','))
-            if row['date_of_birthday']:
-                info += '\n' + 'Дата рождения: ' + row['date_of_birthday']
-            if row['languages']:
-                info += '\n' + 'Языки произведений: ' + ', '.join(row['languages'].split(','))
-            if row['genres']:
-                info += '\n' + 'Жанры: ' + ', '.join(row['genres'].split(','))
-            print(info)
+        print([row for row in reader])
 
 
 if __name__ == '__main__':
