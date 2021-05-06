@@ -123,7 +123,16 @@ pool = set()
 def start_search():
     global thread_number
 
-    for author in load():
+    author_arr = load()
+
+    # Проверка на существование информации о авторе в системе
+    with open('data.csv', mode='r', encoding='UTF-8') as f:
+        field_names = ['src_name', 'name', 'careers', 'date_of_birthday', 'languages', 'genres']
+        reader = csv.DictReader(f, fieldnames=field_names)
+        exist_author = [i['src_name'] for i in reader]
+        author_arr = [author for author in author_arr if author not in exist_author]
+
+    for author in author_arr:
         pool.add(author)
 
     thread_arr = []
