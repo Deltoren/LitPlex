@@ -20,7 +20,7 @@ def save(data):
 
 
 def load():
-    with open('library.csv', encoding='UTF-8') as f:
+    with open('../library.csv', encoding='UTF-8') as f:
         reader = csv.reader(f, delimiter='\n')
         return [row[0] for row in reader]
 
@@ -149,5 +149,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
+    main()
     print(psutil.cpu_count())
