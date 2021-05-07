@@ -49,19 +49,15 @@ def parsing(book):
 
     name = book_page.select_one('table.infobox > tbody > tr > th').getText()
 
-    '''genre = book_page.select('[data-wikidata-property-id="P136"]')
-
-    if genre:
-        if book_page.select('[data-wikidata-property-id="P136"] > a'):
-            genre = [a.getText() for a in book_page.select('[data-wikidata-property-id="P136"] > a')]
-        else:
-            print(genre)
-            genre = genre.getText()'''
+    genre = book_page.select_one('[data-wikidata-property-id="P136"]').getText()
+    if "[" in genre:
+        genre = genre[:genre.index("[")]
 
     if name:
         data = {"name": name}
-    '''if genre:
-        data["genre"] = genre'''
+
+    if genre:
+        data = {"name": name, "genre": genre}
 
     return data
 
