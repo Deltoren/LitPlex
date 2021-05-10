@@ -7,6 +7,8 @@ import psutil
 
 lock = threading.Lock()
 thread_number = psutil.cpu_count()
+data_wiki = []
+pool = set()
 
 
 def save(data):
@@ -27,39 +29,65 @@ def parse(url):
     return BeautifulSoup(r.content, 'lxml')
 
 def start_search():
-    books = load()
-    data = []
-    for book in books:
-        data.append(parsing(book))
+    global thread_number
 
-    save(data)
+    for book in load():
+        pool.add(book)
+
+    thread_arr = []
+
+    for i in range(thread_number):
+        thread = threading.Thread(target=parsing)
+        thread_arr.append(thread)
+        thread.start()
+
+    for thread in thread_arr:
+        thread.join()
+
+    thread_arr.clear()
+    pool.clear()
+    save(data_wiki)
 
 
-def parsing(book):
-    book = book.split(".")[0]
-    search_url = 'https://ru.wikipedia.org/w/index.php?search=' \
-                 + '+'.join(book.split(' ')) \
-                 + '&title=Служебная%3AПоиск&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1'
-    search_page = parse(search_url)
-    book_url = search_page.select_one('div.searchresults > ul.mw-search-results > li.mw-search-result > \
-                                             div.mw-search-result-heading > a').get('href')
+def parsing():
+    while True:
+        with lock:
+            if pool:
+                book = pool.pop()
+                book = book.split(".")[0]
+                search_url = 'https://ru.wikipedia.org/w/index.php?search=' \
+                             + '+'.join(book.split(' ')) \
+                             + '&title=Служебная%3AПоиск&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1'
+            else:
+                break
 
-    book_url = 'https://ru.wikipedia.org' + book_url
-    book_page = parse(book_url)
+        try:
+            search_page = parse(search_url)
+            book_url = search_page.select_one('div.searchresults > ul.mw-search-results > li.mw-search-result > \
+                                                     div.mw-search-result-heading > a').get('href')
 
-    name = book_page.select_one('table.infobox > tbody > tr > th').getText()
+            book_url = 'https://ru.wikipedia.org' + book_url
+            book_page = parse(book_url)
 
-    genre = book_page.select_one('[data-wikidata-property-id="P136"]').getText()
-    if "[" in genre:
-        genre = genre[:genre.index("[")]
+            name = book_page.select_one('table.infobox > tbody > tr > th').getText()
 
-    if name:
-        data = {"name": name}
+            genre = book_page.select_one('[data-wikidata-property-id="P136"]').getText()
+            if "[" in genre:
+                genre = genre[:genre.index("[")]
 
-    if genre:
-        data = {"name": name, "genre": genre}
+            with lock:
+                print(name, 'is done')
+                book = {'name': name}
+                if name:
+                    book = {"name": name}
 
-    return data
+                if genre:
+                    book = {"name": name, "genre": genre}
+                data_wiki.append(book)
+
+        except requests.exceptions.ConnectionError:
+            print('Connection Error')
+            continue
 
 def main():
     start_search()
