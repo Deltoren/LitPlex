@@ -54,10 +54,15 @@ def parsing():
         with lock:
             if pool:
                 book = pool.pop()
-                book = book.split(".")[0]
-                search_url = 'https://ru.wikipedia.org/w/index.php?search=' \
-                             + '+'.join(book.split(' ')) \
-                             + '&title=Служебная%3AПоиск&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1'
+                format = book.split(".")[1]
+                print(format)
+                if format == "txt" or format == "fb2" or format == "epub" or format == "pdf":
+                    book = book.split(".")[0]
+                    search_url = 'https://ru.wikipedia.org/w/index.php?search=' \
+                                 + '+'.join(book.split(' ')) \
+                                 + '&title=Служебная%3AПоиск&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1'
+                else:
+                    break
             else:
                 break
 

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Закончил работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг жанра и записи его в файл рядом с ранее полученным именем">
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Books/Parsing_Books.py" beforeDir="false" afterPath="$PROJECT_DIR$/Books/Parsing_Books.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Books/book_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Books/book_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Books/books.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Books/books.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,8 +215,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.Parsing_Books" />
-        <item itemvalue="Python.ParsingAuthor" />
         <item itemvalue="Python.ScanningFiles" />
+        <item itemvalue="Python.ParsingAuthor" />
         <item itemvalue="Python.Books_Activity" />
         <item itemvalue="Python.SingleAuthor" />
       </list>
@@ -335,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620381768886</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам">
+      <created>1620639474018</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1620639474018</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -382,6 +390,7 @@
     <MESSAGE value="Реализовал функции для работы с наименованиями книг&#10;- добавил функцию загрузки информации о наименованиях книг&#10;- добавил функцию сохранения информации о наименованиях книг" />
     <MESSAGE value="Начал работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг наименования книги и считывания его в файл" />
     <MESSAGE value="Закончил работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг жанра и записи его в файл рядом с ранее полученным именем" />
-    <option name="LAST_COMMIT_MESSAGE" value="Закончил работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг жанра и записи его в файл рядом с ранее полученным именем" />
+    <MESSAGE value="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам" />
   </component>
 </project>
