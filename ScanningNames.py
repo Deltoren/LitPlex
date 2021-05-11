@@ -7,6 +7,10 @@ def ScanningPath(s):
 
 def ScanningNames():
     a = ScanningPath("C:\\Users\gibne\Библиотека")
+
+    # Исключение "скрытых" папок
+    a = [name for name in a if name[0] != '.']
+
     print(a, "\n")
 
     with open("library.csv", mode="w", encoding='utf-8') as w_file:
