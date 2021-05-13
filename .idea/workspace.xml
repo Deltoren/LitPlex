@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам">
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Доделал страницу автора:&#10;-доделал вывод информации об авторе&#10;-сделал переход между Главной активити и Активити отдельного автора">
+      <change afterPath="$PROJECT_DIR$/Books/Books_Activity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Books/Parsing_Books.py" beforeDir="false" afterPath="$PROJECT_DIR$/Books/Parsing_Books.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Books/book_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Books/book_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Books/books.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Books/books.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +29,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ScanningFiles" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,7 +53,7 @@
       <recent name="C:\Users\gibne\PycharmProjects\LitPlex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Parsing_Books">
+  <component name="RunManager" selected="Python.Books_Activity">
     <configuration name="Books_Activity" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LitPlex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +75,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Genre_Activity" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LitPlex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Genres" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Genres/Genre_Activity.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main_Activity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="LitPlex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,69 +109,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main_Activity.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ParsingAuthor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="LitPlex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Pasring" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Pasring/ParsingAuthor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Parsing_Books" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="LitPlex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Books" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Books/Parsing_Books.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ScanningFiles" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="LitPlex" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Books" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Books/ScanningFiles.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -204,19 +160,17 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.Books_Activity" />
       <item itemvalue="Python.Main_Activity" />
       <item itemvalue="Python.ScanningNames" />
-      <item itemvalue="Python.Books_Activity" />
       <item itemvalue="Python.SingleAuthor" />
-      <item itemvalue="Python.ScanningFiles" />
-      <item itemvalue="Python.ParsingAuthor" />
-      <item itemvalue="Python.Parsing_Books" />
+      <item itemvalue="Python.Genre_Activity" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Parsing_Books" />
-        <item itemvalue="Python.ScanningFiles" />
-        <item itemvalue="Python.ParsingAuthor" />
+        <item itemvalue="Python.Genre_Activity" />
+        <item itemvalue="Python.SingleAuthor" />
+        <item itemvalue="Python.Books_Activity" />
         <item itemvalue="Python.Books_Activity" />
         <item itemvalue="Python.SingleAuthor" />
       </list>
@@ -287,63 +241,7 @@
       <option name="project" value="LOCAL" />
       <updated>1619528460561</updated>
     </task>
-    <task id="LOCAL-00009" summary="init commit&#10;- Создал PythonFile ScanningFiles, в котором будут реализованы функции, позволяющие сканировать названия файлов в папке">
-      <created>1620221150045</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1620221150045</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Реализовал считывание файлов&#10;- реализвал грамотное чтение файлов из директории(функция ScanningFiles)&#10;- реализовал запись наименований файлов&#10;в books.csv">
-      <created>1620223571661</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1620223571661</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Реализовал проверку наименований файлов на грамотное чтение&#10;- добавил чтение наименований файлов из books.csv">
-      <created>1620312801887</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1620312801887</updated>
-    </task>
-    <task id="LOCAL-00012" summary="init commit&#10;- добавил файл Parsing_Books.py, в котором будет реализован парсинг книг">
-      <created>1620317068040</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1620317068040</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Реализовал функции для работы с наименованиями книг&#10;- добавил функцию загрузки информации о наименованиях книг&#10;- добавил функцию сохранения информации о наименованиях книг">
-      <created>1620318211575</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1620318211575</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Начал работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг наименования книги и считывания его в файл">
-      <created>1620321263080</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1620321263081</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Закончил работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг жанра и записи его в файл рядом с ранее полученным именем">
-      <created>1620381768885</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1620381768886</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам">
-      <created>1620639474018</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1620639474018</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -383,14 +281,6 @@
     <MESSAGE value="Начал работу над страницой отдельного автора:&#10;-импортировал нужные библиотки&#10;-создал 2 лэйаута: для боковой панели, для вывода информации об авторе" />
     <MESSAGE value="Начал работу над боковой панель страницы отдельного автора" />
     <MESSAGE value="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе" />
-    <MESSAGE value="init commit&#10;- Создал PythonFile ScanningFiles, в котором будут реализованы функции, позволяющие сканировать названия файлов в папке" />
-    <MESSAGE value="Реализовал считывание файлов&#10;- реализвал грамотное чтение файлов из директории(функция ScanningFiles)&#10;- реализовал запись наименований файлов&#10;в books.csv" />
-    <MESSAGE value="Реализовал проверку наименований файлов на грамотное чтение&#10;- добавил чтение наименований файлов из books.csv" />
-    <MESSAGE value="init commit&#10;- добавил файл Parsing_Books.py, в котором будет реализован парсинг книг" />
-    <MESSAGE value="Реализовал функции для работы с наименованиями книг&#10;- добавил функцию загрузки информации о наименованиях книг&#10;- добавил функцию сохранения информации о наименованиях книг" />
-    <MESSAGE value="Начал работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг наименования книги и считывания его в файл" />
-    <MESSAGE value="Закончил работу над функцией для парсинга страницы Википедии&#10;- реализовал парсинг жанра и записи его в файл рядом с ранее полученным именем" />
-    <MESSAGE value="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал многопоточность в поиске иноформации о книгах&#10;- каждая книга обрабатывается своим потоком&#10;-теперь функция parsing передается потокам" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил ошибки:&#10;-в результате сляния веток возникли ошибки в коде, связанные с выводом информации об авторе" />
   </component>
 </project>
