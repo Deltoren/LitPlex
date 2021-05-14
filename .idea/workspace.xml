@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Доделал страницу автора:&#10;-доделал вывод информации об авторе&#10;-сделал переход между Главной активити и Активити отдельного автора" />
+    <list default="true" id="7a283214-27f5-4d90-bd18-54bff75fd19b" name="Default Changelist" comment="Доделал страницу автора:&#10;-доделал вывод информации об авторе&#10;-сделал переход между Главной активити и Активити отдельного автора">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Books/Books_Activity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Books/Books_Activity.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,14 +45,36 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Books" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\gibne\PycharmProjects\LitPlex\Books" />
       <recent name="C:\Users\gibne\PycharmProjects\LitPlex" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.SingleAuthor">
+  <component name="RunManager" selected="Python.Books_Activity">
+    <configuration name="Books_Activity" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="LitPlex" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Books" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Books/Books_Activity.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main_Activity" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="LitPlex" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,16 +139,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.Books_Activity" />
       <item itemvalue="Python.Main_Activity" />
       <item itemvalue="Python.ScanningNames" />
       <item itemvalue="Python.SingleAuthor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Books_Activity" />
+        <item itemvalue="Python.SingleAuthor" />
+        <item itemvalue="Python.Books_Activity" />
         <item itemvalue="Python.SingleAuthor" />
         <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.ScanningNames" />
-        <item itemvalue="Python.ScanningNames" />
       </list>
     </recent_temporary>
   </component>

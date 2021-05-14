@@ -11,14 +11,12 @@ thread_number = psutil.cpu_count()
 
 
 def save(data):
-    with open('data.csv', 'r+', encoding='UTF-8') as f:
-        field_names = ['src_name', 'name', 'careers', 'date_of_birthday', 'languages', 'genres']
+    with open('data.csv', 'w', encoding='UTF-8') as f:
+        field_names = ['name', 'careers', 'date_of_birthday', 'languages', 'genres']
         writer = csv.DictWriter(f, fieldnames=field_names)
-        reader = csv.DictReader(f, fieldnames=field_names)
-        exist_authors = [i['src_name'] for i in reader]
+        writer.writeheader()
         for author in data:
-            if author['src_name'] not in exist_authors:
-                writer.writerow(author)
+            writer.writerow(author)
 
 
 def load():
@@ -38,9 +36,9 @@ def get_info_wikipedia():
 
         with lock:
             if pool:
-                author_name = pool.pop()
+                author = pool.pop()
                 search_url = 'https://ru.wikipedia.org/w/index.php?search=' \
-                             + '+'.join(author_name.split(' ')) \
+                             + '+'.join(author.split(' ')) \
                              + '&title=Служебная%3AПоиск&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1'
             else:
                 break
@@ -74,7 +72,7 @@ def get_info_wikipedia():
 
             with lock:
                 print(name, 'is done')
-                author = {'src_name': author_name, 'name': name}
+                author = {'name': name}
                 if career_a:
                     author['careers'] = ",".join(career)
                 author['date_of_birthday'] = date_of_birthday
@@ -96,16 +94,7 @@ pool = set()
 def start_search():
     global thread_number
 
-    author_arr = load()
-
-    # Проверка на существование информации о авторе в системе
-    with open('data.csv', mode='r', encoding='UTF-8') as f:
-        field_names = ['src_name', 'name', 'careers', 'date_of_birthday', 'languages', 'genres']
-        reader = csv.DictReader(f, fieldnames=field_names)
-        exist_author = [i['src_name'] for i in reader]
-        author_arr = [author for author in author_arr if author not in exist_author]
-
-    for author in author_arr:
+    for author in load():
         pool.add(author)
 
     thread_arr = []
@@ -120,6 +109,7 @@ def start_search():
 
     thread_arr.clear()
     pool.clear()
+    save(data_wikipedia)
 
 
 def main():
@@ -160,3 +150,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    print(psutil.cpu_count())
