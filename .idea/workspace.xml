@@ -139,18 +139,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.Books_Activity" />
       <item itemvalue="Python.Main_Activity" />
       <item itemvalue="Python.ScanningNames" />
       <item itemvalue="Python.SingleAuthor" />
-      <item itemvalue="Python.Books_Activity" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Books_Activity" />
         <item itemvalue="Python.SingleAuthor" />
+        <item itemvalue="Python.Books_Activity" />
         <item itemvalue="Python.SingleAuthor" />
-        <item itemvalue="Python.ScanningNames" />
-        <item itemvalue="Python.ScanningNames" />
+        <item itemvalue="Python.SingleAuthor" />
       </list>
     </recent_temporary>
   </component>
